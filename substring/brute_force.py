@@ -1,5 +1,7 @@
 # Brute Force
 def subs(s:str):
+    if len(s) == 0:
+        return 0
     count = 0
     b = []
     for i in s:
@@ -17,7 +19,7 @@ def subs(s:str):
             if not ck:
                 b.append(len(t))
         count += 1
-    maxN = 0
+    maxN = 1
     for z in b:
         if z>maxN:
             maxN=z
