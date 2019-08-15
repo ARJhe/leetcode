@@ -1,6 +1,4 @@
-# 'abcabcbd;
-# 'bbbbb'
-# 'pwwkew'
+# Brute Force
 def subs(s:str):
     count = 0
     b = []
@@ -19,7 +17,8 @@ def subs(s:str):
             if not ck:
                 b.append(len(t))
         count += 1
-    return b
-
-s = 'abcabcb'
-x = subs(s)
+    maxN = 0
+    for z in b:
+        if z>maxN:
+            maxN=z
+    return maxN
