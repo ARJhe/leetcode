@@ -10,7 +10,12 @@ public:
 				if (nums.at(i) + nums.at(j) == target){
 					ans.push_back(i);
 					ans.push_back(j);				
-				}	
+					break;
+				}
+				if (ans.size() > 0){
+					break;
+				}
+
 		return ans;
 	}
 };
