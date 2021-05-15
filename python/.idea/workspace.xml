@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddf2c39a-6d2c-46fa-8a83-04c3af190ad8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/2_add_two_numbers.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +67,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1219" y="300" key="FileChooserDialogImpl" timestamp="1611452788631">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="1219" y="300" key="FileChooserDialogImpl/0.40.1920.1040@0.40.1920.1040" timestamp="1611452788631" />
     <state width="934" height="281" key="GridCell.Tab.0.bottom" timestamp="1610785568398">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
@@ -105,6 +107,10 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="0" y="207" key="SettingsEditor/0.40.1920.1040@0.40.1920.1040" timestamp="1610755462656" />
+    <state width="487" height="520" key="XDebugger.FullValuePopup" timestamp="1611060584318">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="487" height="520" key="XDebugger.FullValuePopup/0.40.1920.1040@0.40.1920.1040" timestamp="1611060584318" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
