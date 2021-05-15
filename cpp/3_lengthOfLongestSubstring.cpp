@@ -9,14 +9,15 @@ int lengthOfLongestSubstring(string s) {
     int maxL = 0;
     string res="";
 
-    for(char& c: s){
+    for(char& c: s){ // for c in s [ c is alias of s' item ] 
+        // another use for(char c:s ) do a copy for each element.
         size_t f = res.find(c);
-        if (f == string::npos){
+        if (f == string::npos){ // remind compares to use double euals
             res += c;
         }
         else{
             size_t pos = res.find(c);
-            res = res.substr(pos+1) + c;
+            res = res.substr(pos+1) + c; // tool
 
         }
         if (res.length() > maxL){
