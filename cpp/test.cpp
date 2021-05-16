@@ -1,11 +1,9 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
 int main(){
-    size_t sz = string::npos;
-    string s = "";
-    s += "test";
-    s += "!";
-    cout << s.substr(0,2) << endl;
-
-}
-
+    double res = 0.0;
+    res = (3+4) /2.0;
+    cout << res << endl;
+};
+        
