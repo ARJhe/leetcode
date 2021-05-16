@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <algorithm>
 using namespace std;
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2){
     // binary search should be O(log(m+n))
@@ -35,3 +34,11 @@ int main(){
     double d3 = findMedianSortedArrays(n1,n2);
     cout << d3 << endl;
 };
+// This is for decreasing runtime. Without this code the runtime was 60~40ms.
+// Use this template always on leetcode to improve runtime.
+static const int _ = []() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
