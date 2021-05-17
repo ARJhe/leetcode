@@ -9,7 +9,7 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2){
     //      >> should be (3+4)/2.0
     int s1 = nums1.size();
     int s2 = nums2.size();
-    if ( s1 > 1000 || s1 < 0 || s2 < 0 || s2 > 1000 || s1+s2 < 1 || s1+s2 > 200){
+    if ( s1 > 1000 || s1 < 0 || s2 < 0 || s2 > 1000 || s1+s2 < 1 || s1+s2 > 2000){
         return 0;
     }
     double res;
