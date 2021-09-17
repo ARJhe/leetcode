@@ -7,35 +7,53 @@ bool isNotAlphaDigit(string s){
     }    
     return res;
 };
-string longestPalindrome(string s){
+string longestPalindrome_bruteforce(string s){
     // find longest word which has same initial word and end word: ex: string "cabad" anwser is "aba"
-    // 1. walk through string
     string res;
     string maxS;
     if (s.length() > 1000 || s.length() < 1 || isNotAlphaDigit(s)){
         return "";
     }
-    int mostleft = 0, mostright=0;
-    for (int i=0; i < s.length(); i++){
-        int currentleft = i, currentright =i;
-        while(somecondition){
-            i = currentright;
-        }
-        while(somecondition){
-            currentright++;
-            currentleft--;
-        }
-        if(somecondition){
-            mostletf = currentleft;
-            mostright = currentright;
-        }
-        return s.substr(mostleft, mostright - mostleft +1);
+    // string.join(",") make string.length become odd
+   int len = s.length();
+   for (int i=0; i<=len; i++){ s.insert(len-i, ","); }
+   len = s.length();
+   int lw=0;
+   int rw=0;
+   int pos=0;
+   int max = 0;
+   int ret = 0;
+   for (int i=0; i<=len; i++)
+   {
+    // left window and right window
+       lw=i;
+       rw=i;
+       while(lw>0 && rw <= len && s[lw]==s[rw])
+       {
+           lw--;
+           rw++;
+           ret = rw - lw;
+       
+            if (ret > max)
+           { 
+               max = ret;
+               pos = i;
+           }
+       }
+   }
+    // ,a,a, 4,2 || ,a,c,c,a, 8,4
+    // pos = max / 2
+    cout << s << endl;
+    cout << pos << "," << max << endl;    
+    res = s.substr( pos - (max) / 2  ,max+1);
+    return res;
 }
 int main(){
-    string s="ccc" ;
-    string res = longestPalindrome(s);
+    string s="bacca" ;
+    string res = longestPalindrome_bruteforce(s);
     cout << res << endl;
 };
+
 // Use this template always on leetcode to improve runtime.
 static const int _ = []() {
     ios::sync_with_stdio(false);
