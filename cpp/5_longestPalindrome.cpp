@@ -41,8 +41,6 @@ string longestPalindrome(string s){
             rw++;
        }
    }
-   cout << maxS << endl;
-   cout << pos << max << endl;
     res = maxS.substr( pos - (max) / 2  ,max+1);
     res.erase(remove(res.begin(), res.end(), ','), res.end());
     return res;
