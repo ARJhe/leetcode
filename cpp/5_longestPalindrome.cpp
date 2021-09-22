@@ -7,17 +7,17 @@ bool isNotAlphaDigit(string s){
     }    
     return res;
 };
-string longestPalindrome_bruteforce(string s){
+string longestPalindrome(string s){
     // find longest word which has same initial word and end word: ex: string "cabad" anwser is "aba"
     string res;
-    string maxS;
+    string maxS=s;
     if (s.length() > 1000 || s.length() < 1 || isNotAlphaDigit(s)){
         return "";
     }
+    int len = s.length();
     // string.join(",") make string.length become odd
-   int len = s.length();
-   for (int i=0; i<=len; i++){ s.insert(len-i, ","); }
-   len = s.length();
+   for (int i=0; i<=len; i++){ maxS.insert(len-i, ","); }
+   len = maxS.length();
    int lw=0;
    int rw=0;
    int pos=0;
@@ -28,10 +28,8 @@ string longestPalindrome_bruteforce(string s){
     // left window and right window
        lw=i;
        rw=i;
-       while(lw>0 && rw <= len && s[lw]==s[rw])
+       while(lw>=0 && rw <= len && maxS[lw]==maxS[rw])
        {
-           lw--;
-           rw++;
            ret = rw - lw;
        
             if (ret > max)
@@ -39,18 +37,20 @@ string longestPalindrome_bruteforce(string s){
                max = ret;
                pos = i;
            }
+            lw--;
+            rw++;
        }
    }
-    // ,a,a, 4,2 || ,a,c,c,a, 8,4
-    // pos = max / 2
-    cout << s << endl;
-    cout << pos << "," << max << endl;    
-    res = s.substr( pos - (max) / 2  ,max+1);
+   cout << maxS << endl;
+   cout << pos << max << endl;
+    res = maxS.substr( pos - (max) / 2  ,max+1);
+    res.erase(remove(res.begin(), res.end(), ','), res.end());
     return res;
 }
+
 int main(){
-    string s="bacca" ;
-    string res = longestPalindrome_bruteforce(s);
+    string s="a" ;
+    string res = longestPalindrome(s);
     cout << res << endl;
 };
 
