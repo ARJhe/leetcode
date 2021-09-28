@@ -31,6 +31,7 @@ int my_reverse(int x) {
 }
 
 // ref: https://stackoverflow.com/a/59029832/9432281
+// Runtime: 0ms(100 %) Memory : 5.7 MB(96.28 %)
 int ref_reverse(int x) {
     long long int ans = 0; //should define with long long int or some compiler will return wrong value
     while (x!=0) 
