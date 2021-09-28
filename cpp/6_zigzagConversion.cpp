@@ -43,17 +43,4 @@ string convert(string s, int numRows)
     return res;
 }
 
-int main(){
-    string s= "abcdefg";
-    int nrows = 4;
-    string res = convert(s, nrows);
-    cout << res << endl;
-    return 0;
-}
 
-static const int _ = []() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    return 0;
-}();
