@@ -32,14 +32,14 @@ int my_reverse(int x) {
 
 // ref: https://stackoverflow.com/a/59029832/9432281
 int ref_reverse(int x) {
-    long long int ans;
+    long long int ans = 0; //should define with long long int or some compiler will return wrong value
     while (x!=0) 
     {
         ans = ans * 10 + (x % 10);
         x /= 10;
     }
 
-    if (ans > Integer.MAX_VALUE) {
+    if (ans > 2147483647 || ans < -2147483648) {
         return 0;
     }
     else
@@ -49,7 +49,7 @@ int ref_reverse(int x) {
 }
 
 int main() {
-    cout << ref_reverse(123456) << endl;
+    cout << ref_reverse(1534236469) << endl;
     return 0;
 }
 
