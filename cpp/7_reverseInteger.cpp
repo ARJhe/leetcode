@@ -1,16 +1,40 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
-int reverse(int x){
+
+int reverse(int x) {
+    if (x == 0)
+        return 0;
     string s = to_string(x);
-    int l = (s.length() % 2 ==0) ? s.length()/2 : (s.length()-1)/2 - 1;
-    /*for(int i=0;i<=l;i++)
-    {
-        string t = s[s.length()-1-i];
-        s[s.length()-1-i] = s[i];
-        s[i] = t;
-    }*/
-    cout << s << endl;
+    string res;
+
+    // just like scan from rightside
+    bool isPos = isdigit(s[0]);
+    s = isPos ? s : s.substr(1, s.length() - 1);
+    int l = s.length();
+    bool islastconstZero = (s[s.length() - 1] == '0') ? true : false;
+    int i = 0;
+    while (i < l) {
+        islastconstZero = (islastconstZero && s[s.length() - 1 - i] == '0') ? true : false;
+        if (!islastconstZero)
+            res += s[s.length() - 1 - i];
+        i++;
+    }
+    res = isPos ? res : '-' + res;
+    
+    return stoi(res);
+    
+}
+
+int main() {
+    cout << reverse(0) << endl;
     return 0;
 }
 
-
+// Use this template always on leetcode to improve runtime.
+static const int _ = []() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
