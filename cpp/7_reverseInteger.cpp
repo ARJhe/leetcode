@@ -3,7 +3,7 @@
 using namespace std;
 
 // Runtime: 0ms (100%) Memory: 6.4 MB (7.17%)
-int reverse(int x) {
+int my_reverse(int x) {
     if (x == 0)
         return 0;
     string s = to_string(x);
@@ -30,8 +30,26 @@ int reverse(int x) {
     }
 }
 
+// ref: https://stackoverflow.com/a/59029832/9432281
+int ref_reverse(int x) {
+    long long int ans;
+    while (x!=0) 
+    {
+        ans = ans * 10 + (x % 10);
+        x /= 10;
+    }
+
+    if (ans > Integer.MAX_VALUE) {
+        return 0;
+    }
+    else
+    {
+        return int(ans);
+    }
+}
+
 int main() {
-    cout << reverse(0) << endl;
+    cout << ref_reverse(123456) << endl;
     return 0;
 }
 
