@@ -1,5 +1,9 @@
+# Runtime: 60 ms, faster than 72.99% of Python3 online submissions for Palindrome Number.
+# Memory Usage: 14.3 MB, less than 15.67% of Python3 online submissions for Palindrome Number.
 def ref_isPalindrome():
-    return 0
+    if str(x) == str(x)[::-1]:
+        return True
+    return False
 
 # Runtime: 64 ms, faster than 61.99% of Python3 online submissions for Palindrome Number.
 # Memory Usage: 14.3 MB, less than 48.05% of Python3 online submissions for Palindrome Number.
