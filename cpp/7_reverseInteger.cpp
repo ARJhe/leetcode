@@ -34,7 +34,7 @@ int my_reverse(int x) {
 // Runtime: 0ms(100 %) Memory : 5.7 MB(96.28 %)
 int ref_reverse(int x) {
     long long int ans = 0; //should define with long long int or some compiler will return wrong value
-    while (x!=0) 
+    while (x!=0)
     {
         ans = ans * 10 + (x % 10);
         x /= 10;
